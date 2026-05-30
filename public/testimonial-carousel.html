@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials Carousel - CORACLICK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              slate: {
+                950: '#030712',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <script>
+      const url = new URL(window.location.href);
+      const theme = url.searchParams.get("theme") || "dark";
+      if (theme) {
+        document.documentElement.classList.add(theme);
+      }
+    </script>
+    <style>
+      body {
+        margin: 0;
+        background-color: transparent !important;
+        overflow: hidden;
+      }
+      .liquid-glass {
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+    </style>
+  </head>
+  <body class="bg-transparent text-white">
+    <div id="root"></div>
+    <script type="module" src="/testimonial-carousel.js"></script>
+  </body>
+</html>
