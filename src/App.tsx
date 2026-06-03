@@ -46,6 +46,7 @@ export default function App() {
   }, []);
 
   // Local video paths mapped to the public directory
+  const section5VideoSrc = "/videos/section4_how_it_works.mp4";
   const section8VideoSrc = "/videos/section8_calculator.mp4";
   const section11VideoSrc = "/videos/section11_analytics.mp4";
   const section12VideoSrc = "/videos/section12_stats.mp4";
@@ -207,6 +208,18 @@ export default function App() {
               Turn marketing data into clear profit. See exactly where your next customer comes from before you spend a single dollar.
             </p>
           </div>
+        </div>
+
+        {/* Separated How-it-Works Video Showcase - Edge-to-Edge */}
+        <div className="w-full overflow-hidden aspect-video shadow-[0_0_50px_rgba(255,255,255,0.02)] relative border-b border-white/10">
+          <HlsVideo 
+            src={section5VideoSrc}
+            className="w-full h-full object-cover"
+          />
+          {/* Vignette overlays */}
+          <div className="absolute inset-0 bg-radial-vignette opacity-50 pointer-events-none" />
+          <div className="absolute top-0 left-0 right-0 h-[100px] bg-gradient-to-b from-black/40 to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-[100px] bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
         </div>
       </section>
 
