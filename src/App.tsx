@@ -46,8 +46,6 @@ export default function App() {
   }, []);
 
   // Local video paths mapped to the public directory
-  const heroVideoSrc = "/videos/section2_hero.mp4";
-  const section5VideoSrc = "/videos/section4_how_it_works.mp4";
   const section8VideoSrc = "/videos/section8_calculator.mp4";
   const section11VideoSrc = "/videos/section11_analytics.mp4";
   const section12VideoSrc = "/videos/section12_stats.mp4";
@@ -183,36 +181,6 @@ export default function App() {
         {/* Subtle ambient light glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-white/5 blur-[120px] rounded-full pointer-events-none" />
 
-        {/* Widescreen Hero Video Showcase - Edge-to-Edge */}
-        <motion.div
-          initial={{ opacity: 0, y: 40, scale: 0.98 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="w-full relative z-10 mt-4"
-        >
-          <div 
-            className="w-full border-y border-white/10 overflow-hidden shadow-[0_0_50px_rgba(255,255,255,0.03)] aspect-video relative"
-          >
-            <HlsVideo 
-              src={heroVideoSrc}
-              className="w-full h-full object-cover opacity-80"
-            />
-            {/* Ambient inner shadow */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
-          </div>
-        </motion.div>
-
-        {/* Separated How-it-Works Video Showcase - Edge-to-Edge - Adjacent to Hero Video */}
-        <div className="w-full overflow-hidden aspect-video shadow-[0_0_50px_rgba(255,255,255,0.02)] relative border-b border-white/10">
-          <HlsVideo 
-            src={section5VideoSrc}
-            className="w-full h-full object-cover"
-          />
-          {/* Vignette overlays */}
-          <div className="absolute inset-0 bg-radial-vignette opacity-50 pointer-events-none" />
-          <div className="absolute top-0 left-0 right-0 h-[100px] bg-gradient-to-b from-black/40 to-transparent pointer-events-none" />
-          <div className="absolute bottom-0 left-0 right-0 h-[100px] bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
-        </div>
 
         {/* SECTION 3.0 — COSMIC PLASMA SHOWCASE (Joined in video stack) */}
         <div className="w-full overflow-hidden aspect-video relative shadow-[0_0_50px_rgba(255,255,255,0.02)] border-b border-white/10">
