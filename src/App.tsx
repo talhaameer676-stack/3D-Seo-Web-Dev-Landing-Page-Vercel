@@ -199,13 +199,13 @@ export default function App() {
           {/* Floating Copy Overlay */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 pointer-events-none z-10">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[9px] uppercase tracking-widest text-white/50 bg-white/5 border border-white/10 mb-4 font-mono">
-              Section 3.0 • Neural Network
+              Section 3.0 • Client Acquisition
             </span>
             <h2 className="font-heading italic text-white tracking-tight leading-[0.9] text-3xl sm:text-5xl md:text-6xl max-w-2xl">
-              Predictive Scaling Engine
+              Predictive Growth Engine
             </h2>
             <p className="font-body font-light text-white/60 text-xs md:text-sm max-w-md mt-4 leading-relaxed">
-              Turn marketing data into clear profit. See exactly where your next customer comes from before you spend a single dollar.
+              Unify high-speed web development, authority SEO, and high-converting paid campaigns into a single, high-yield system that scales your revenue predictably.
             </p>
           </div>
         </div>
