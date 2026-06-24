@@ -25,6 +25,9 @@ import { VideoModal } from './components/VideoModal';
 import { RoiCalculator } from './components/RoiCalculator';
 import { CapabilitiesChess } from './components/CapabilitiesChess';
 import { FAQAccordion } from './components/FAQAccordion';
+import { PlasmaBackground } from './components/PlasmaBackground';
+import { ParticleBackground } from './components/ParticleBackground';
+import { LampBackground } from './components/LampBackground';
 
 export default function App() {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -84,7 +87,7 @@ export default function App() {
     <div className="min-h-screen bg-black text-white relative overflow-hidden font-body selection:bg-white selection:text-black">
       
       {/* SECTION 1 — NAVBAR (fixed) */}
-      <header className="fixed top-4 left-0 right-0 w-full z-50 px-4">
+      <header className="fixed top-4 left-0 right-0 w-full z-50 px-4 will-change-transform">
         <nav className="max-w-6xl mx-auto flex items-center justify-between py-3 px-6 liquid-glass rounded-full border border-white/10 backdrop-blur-md">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-3 group">
@@ -185,11 +188,7 @@ export default function App() {
 
         {/* SECTION 3.0 — COSMIC PLASMA SHOWCASE (Joined in video stack) */}
         <div className="w-full overflow-hidden aspect-video relative shadow-[0_0_50px_rgba(255,255,255,0.02)] border-b border-white/10">
-          <iframe
-            src="https://cdn.21st.dev/dhileepkumargm/abstract-glassy-shader/default/bundle.1756989308830.html?theme=dark&dark=true"
-            className="w-full h-full border-none opacity-80"
-            title="Cosmic Plasma Animation"
-          />
+          <PlasmaBackground />
           {/* Soft overlay gradients for integration */}
           <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black to-transparent pointer-events-none" />
           <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black to-transparent pointer-events-none" />
@@ -474,12 +473,7 @@ export default function App() {
       <section className="py-8 bg-black border-t border-white/5 relative overflow-hidden flex justify-center items-center min-h-[200px]">
         {/* Particle Background Layer */}
         <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-          <iframe
-            src="/particle-bg.html?theme=dark&dark=true"
-            className="w-full h-full border-none opacity-50"
-            scrolling="no"
-            title="Particle Background"
-          />
+          <ParticleBackground />
           {/* Edge gradients for smooth blending */}
           <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black to-transparent pointer-events-none" />
           <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black to-transparent pointer-events-none" />
@@ -812,11 +806,7 @@ export default function App() {
       <section id="faq" className="py-24 bg-slate-950 border-t border-white/5 relative overflow-hidden">
         {/* Lamp Background Animation */}
         <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-          <iframe
-            src="/lamp-bg.html?theme=dark&dark=true"
-            className="w-full h-full border-none opacity-40"
-            title="Lamp Background"
-          />
+          <LampBackground />
           {/* Edge gradients for smooth integration */}
           <div className="absolute inset-0 bg-radial-vignette opacity-80" />
           <div className="absolute top-0 left-0 right-0 h-[100px] bg-gradient-to-b from-black to-transparent pointer-events-none" />
@@ -841,11 +831,7 @@ export default function App() {
       <section className="py-24 bg-slate-950 border-t border-white/5 flex flex-col items-center justify-center relative overflow-hidden min-h-[700px]">
         {/* Widescreen CTA Background Paper Shaders Showcase */}
         <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-          <iframe
-            src="https://cdn.21st.dev/muhammadnadeemmn9485134/background-paper-shaders/default/bundle.1755685936907.html?theme=dark&dark=true"
-            className="w-full h-full border-none opacity-30"
-            title="Background Paper Shaders"
-          />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(88,28,135,0.15)_0%,rgba(0,0,0,0)_70%)] opacity-80" />
           <div className="absolute inset-0 bg-radial-vignette opacity-80" />
           <div className="absolute top-0 left-0 right-0 h-[200px] bg-gradient-to-b from-black to-transparent pointer-events-none" />
           <div className="absolute bottom-0 left-0 right-0 h-[200px] bg-gradient-to-t from-[#0c0618] via-[#110a1f]/80 to-transparent pointer-events-none" />
